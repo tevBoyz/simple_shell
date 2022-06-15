@@ -81,7 +81,7 @@ return (buff);
  * Return: error val
  */
 
-int create_error(cahr **args, int err)
+int create_error(char **args, int err)
 {
 char *error;
 

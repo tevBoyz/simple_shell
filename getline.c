@@ -71,7 +71,7 @@ if (*lineptr == NULL)
 if (b > 120)
 *n = b;
 else
-n = 120;
+*n = 120;
 *lineptr = buffer;
 }
 else if (*n < b)
@@ -101,7 +101,7 @@ ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
 {
 static ssize_t input;
 ssize_t ret;
-char c = 'x', buffer;
+char c = 'x', *buffer;
 int r;
 
 if (input == 0)

@@ -12,7 +12,7 @@ void help_unsetenv(void);
 
 void help_env(void)
 {
-char *msg = "env: env\n\tPrints the current environment.\n"
+char *msg = "env: env\n\tPrints the current environment.\n";
 write(STDOUT_FILENO, msg, _strlen(msg));
 }
 
@@ -22,7 +22,7 @@ write(STDOUT_FILENO, msg, _strlen(msg));
  * Return: none
  */
 
-void helpp_setenv(void)
+void help_setenv(void)
 {
 char *msg = "setenv: setenv [VARIABLE] [VALUE]\n\tInitializes a new";
 write(STDOUT_FILENO, msg, _strlen(msg));

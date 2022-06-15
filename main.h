@@ -5,9 +5,9 @@
 #include <signal.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-//#include <sys/wait.h>
+#include <sys/wait.h>
 #include <stdlib.h>
-//#include <unistd.h>
+#include <unistd.h>
 #include <errno.h>
 #include <stdio.h>
 
@@ -92,13 +92,13 @@ int _strncmp(const char *s1, const char *s2, size_t n);
 
 /* Builtins */
 int (*get_builtin(char *command))(char **args, char **front);
-int shellby_exit(char **args, char **front);
-int shellby_env(char **args, char __attribute__((__unused__)) * *front);
-int shellby_setenv(char **args, char __attribute__((__unused__)) * *front);
-int shellby_unsetenv(char **args, char __attribute__((__unused__)) * *front);
-int shellby_cd(char **args, char __attribute__((__unused__)) * *front);
-int shellby_alias(char **args, char __attribute__((__unused__)) * *front);
-int shellby_help(char **args, char __attribute__((__unused__)) * *front);
+int myshell_exit(char **args, char **front);
+int myshell_env(char **args, char __attribute__((__unused__)) **front);
+int myshell_setenv(char **args, char __attribute__((__unused__)) **front);
+int myshell_unsetenv(char **args, char __attribute__((__unused__)) **front);
+int myshell_cd(char **args, char __attribute__((__unused__)) **front);
+int myshell_alias(char **args, char __attribute__((__unused__)) **front);
+int myshell_help(char **args, char __attribute__((__unused__)) **front);
 
 /* Builtin Helpers */
 char **_copyenv(void);

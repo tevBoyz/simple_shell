@@ -52,7 +52,7 @@ char *error_1(char **args)
 char *error;
 int len;
 
-len = _strlen(name) + strlen(args[0]) + 13;
+len = _strlen(name) + _strlen(args[0]) + 13;
 error = malloc(sizeof(char) * (len + 1));
 if (!error)
 return (NULL);
@@ -111,7 +111,7 @@ char *error, *hist_str;
 int len;
 
 hist_str = __itoa(hist);
-if (!hist_Str)
+if (!hist_str)
 return (NULL);
 
 if (args[0][0] == '-')
